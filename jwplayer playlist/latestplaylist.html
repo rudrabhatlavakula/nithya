@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="video.css">
+<script src="http://jwpsrv.com/library/cpajHG5SEeOpQCIACi0I_Q.js">
+jwplayer.key="ih4xYnIa6x0EW8AlLYuNl1dyLjWVZ1fcKS+x2Q==";
+</script>
+<meta http-equiv="Content-Type"
+ content="text/html; charset=utf-8"/>
+<title>Jwplayer</title>
+</head>
+<body>
+<div id="header">Video  playlist</div>
+<div id="nav">List<br>
+</div>
+<div id="container">
+<div id="top">
+</div>
+</div>
+<script type="text/javascript">
+jwplayer('container').setup({
+playlist: [{
+  file: '../data/mov_bbb.mp4',
+  image: '../data/polar.jpg',
+  title: 'Movie BBB',
+  mediaid: '123456',
+  description:'Polarbear animation'
+},
+{
+  file: '../data/panda.mp4',
+  image: '../data/panda.jpg',
+  title: 'Panda',
+  mediaid: '234567',
+  description:'Natural panda video'
+}]  
+});
+//container.addButton("D:\Nithya\data\dl.png","Download now",function(){window.location.href = playerInstance.getPlaylistItem()['file'];},btn);
+
+jwplayer().onReady(function(){
+		var myVideos = jwplayer().getPlaylist();
+		for (var i = 0; i < myVideos.length; i++) {
+			document.getElementById('nav').innerHTML += '<div class=listbar_item  onClick="jwplayer().playlistItem(' + i + ');"><img style="float: left; height: 60px; margin-right: 5px;" src=' + myVideos[i].image + '><b>' + myVideos[i].title + '</b><br>' + myVideos[i].description + '</div>';
+		} 
+	});
+</script>
+<div id="menu">
+<ul>
+<li onclick='jwplayer().seek(10)'><img src="D:\Nithya\data\skip.png"></li>
+
+ </ul>
+</div>
+<div id="footer">
+<a href="https://www.jwplayer.com/sign-up/">https://www.jwplayer.com/sign-up/</a>
+</div>
+</body>
+</html>

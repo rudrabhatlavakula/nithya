@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>welcome to {{ title }}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		    var uid;
+			var fname;
+			var lname;
+			$("#submit").click(function(){
+			    uid=$("#uid").val();
+				fname=$("#fname").val();
+				lname=$("#lname").val();
+				alert("New user created with user id :"+uid);
+				$.post("http://localhost:8080/test",{fname:fname,uid:uid,lname:lname},function(data){
+						alert("Calling next.");
+					if(data==='done') 
+					{
+						window.location.href="/next";
+					}
+				});				
+			});
+		});
+	</script>
+  </head>
+  <body>
+   {% include "baseform.html" %}
+  </body>
+</html>

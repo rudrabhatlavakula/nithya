@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://jwpsrv.com/library/cpajHG5SEeOpQCIACi0I_Q.js">
+jwplayer.key="ih4xYnIa6x0EW8AlLYuNl1dyLjWVZ1fcKS+x2Q==";
+</script>
+<meta http-equiv="Content-Type"
+ content="text/html; charset=utf-8"/>
+<title>Jwplayer</title>
+</head>
+<body>
+<div id="container">
+</div>
+<script type="text/javascript">
+jwplayer('container').setup({
+  file: '../data/panda.mp4',
+  width: 480,
+  height: 270,
+  advertising: {
+    client: 'vast',
+    tag: 'http://example.adserver.com/servlet/vast2/zone?zid=123'
+    
+  }
+  
+});
+
+function loadVideo(myFile,myImage) { 
+    jwplayer('container').load([{
+      file: myFile,
+      image: myImage
+    }]);
+    playerInstance.play();
+  };
+</script>
+
+<li><a href="javascript:loadVideo('../data/mov_bbb.mp4','../data/pic.jpg')">Video 1</a></li>
+<li><a href="javascript:loadVideo('../data/panda.mp4','../data/pic-Copy.jpg')">Video 2</a></li>
+</body>
+</html>

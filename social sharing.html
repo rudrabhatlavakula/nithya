@@ -1,0 +1,236 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8" />
+<title>social sharing</title>
+
+<script src="http://content.jwplatform.com/libraries/C43Zjlwr.js"></script>
+<script src="jwplayer.js"></script>
+<script src="jwplayer.flash.swf"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+<center>
+<div style="width:60%; position:relative;" id="testing2">
+	
+	<div id="testing"></div>
+	
+
+</div>
+
+</center>
+
+
+<script type="text/javascript">
+var playerInstance = jwplayer("testing");
+playerInstance.setup({
+    image: 'pic.jpg',
+    title: 'Star Wars: Episode VII - The Force Awakens (2015) TV Spot - New Threat - Trailer Addict',
+	sources: [{
+        file: 'happyfit2.mp4'
+      },{
+        file: 'happyfit2.mp4'
+		,'default':'true'
+      }]
+	,skin : {
+	name:"glow"
+	}
+	,sharing: {
+      code: encodeURI("<link rel='stylesheet' type='text/css' href='//cdn.traileraddict.com/css/rembed.css'><div class='outer-embed-ta'><iframe width='100%' src='//v.traileraddict.com/106434' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true' scrolling='no' class='embed-ta'></iframe></div>"),
+      link: "http://www.traileraddict.com/star-wars-episode-vii/tune-in-teaser-2",
+	  sites: ['facebook','twitter','googleplus','reddit','email']
+   }
+   ,related: {
+      file: "//v.traileraddict.com/jwplayerxml.php?f=21935&t=107753",
+      onclick: "link"
+    }
+	,primary:'html'
+	/*,logo: {
+		file: '//cdn.traileraddict.com/img/logo-ta_40x40.png',
+		link: 'http://www.traileraddict.com',
+		position:'bottom-left'
+	}*/
+	,abouttext: 'TrailerAddict'
+	,aboutlink: 'http://www.traileraddict.com'
+    //,mediaid: '123456'
+});
+
+</script>
+
+<style>
+.jw-skin-glow .jw-title  {display:none;}
+.jw-skin-glow .jw-icon-hd  {font-size:22px; color: rgba(255, 255, 255, 0.8);}
+.jw-skin-glow .jw-icon-hd:hover  {color: rgba(255, 255, 255, 1);}
+.jw-skin-glow .jw-controlbar  {font-size:20px;}
+.jw-skin-glow .jw-text-elapsed {font-size:14px; color: rgba(255, 255, 255, 0.6); }
+.jw-skin-glow .jw-text-duration {font-size:14px; color: rgba(255, 255, 255, 0.6); top:1px; }
+div[button="related"] {display:none;}
+.jw-logo {float:left !important; position:relative; left:0; top:calc(100%-40px) !important;}
+.jw-watermark {display:none;}
+.jw-skin-glow .jw-display-icon-container {
+border-radius:50%;
+background-color: rgba(140, 198, 63, 0.7);
+height:90px;
+width:90px;
+}
+.jw-skin-glow .jw-display-icon-container:hover {
+border-radius:50%;
+background-color: rgba(50, 50, 50, 0.75);
+}
+.jw-skin-glow .jw-icon-display {
+color:#FFFFFF;
+}
+
+
+.jw-skin-glow .jw-title-primary {
+color:#FFFFFF;
+padding:10px;
+background-color: rgba(0, 0, 0, 0.3);
+width:96%;
+display:inline-block;
+}
+
+.jw-skin-glow .jw-title {text-align:center;}
+
+.jw-skin-glow .jw-icon-playback  {color: rgba(255, 255, 255, 0.8);}
+.jw-skin-glow .jw-icon-volume  {color: rgba(255, 255, 255, 0.8); top:2px;}
+.jw-skin-glow .jw-menu  {color: rgba(255, 255, 255, 0.8);}
+.jw-skin-glow .jw-icon-fullscreen {color: rgba(255, 255, 255, 0.8); top:2px;}
+.jw-skin-glow .jw-slider-volume  {color: #81BF4B; border-radius:1px;}
+.jw-skin-glow .jw-buffer {background-color: #426811; border-radius:1px;}
+.jw-skin-glow .jw-progress {background-color: #81BF4B; border-radius:1px;}
+
+.jw-skin-glow .jw-knob {display:none; border-radius:1px; background-color: #c5e24e;}
+.jw-skin-glow .jw-rail {border-radius:1px;}
+
+.jw-skin-glow .jw-icon-hd.jw-toggle.jw-off{color: rgba(255, 255, 255, 0.8); top:2px;}
+.jw-skin-glow .jw-icon-hd.jw-toggle.jw-off:hover{color: rgba(255, 255, 255, 1); top:2px;}
+.jw-skin-glow .jw-icon-hd.jw-toggle{ color: #c5e24e; top:2px;}
+.jw-skin-glow .jw-related-thumb {white-space:normal;}
+.jw-skin-glow .jw-plugin-related .jw-related-thumb .jw-related-thumb-title {font-size:18px; white-space:normal; word-wrap:normal; line-height:1.2em; text-shadow:0px 0px 1px rgba(255, 255, 255, 0.8); }
+
+#overlay{
+    position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+    background-color: rgba(0, 0, 0, .86);
+	display:block;
+	text-align:center;
+}
+
+#testing {
+    width: 100%;
+    height:100%;
+	position:relative;
+}
+
+#overlaycell {
+    position:relative;
+	top:25%;
+    color:#FFFFFF;
+	opacity:.86;
+}
+
+#overlaycell img {
+	width:16%;
+	max-width:100px;
+	opacity:.82;
+	margin:0px 8px;
+	outline:none;
+}
+
+#overlaycell img:hover {
+	opacity:.98;
+	cursor:pointer;
+}
+</style>
+
+<script>
+//player callbacks
+playerInstance.on('levelsChanged', function(e) {
+	var qual = playerInstance.getCurrentQuality();
+							if(qual == 1) {
+								$.cookie('hdstatus', 'yes', { expires: 60, path: '/' });
+							} else {
+								$.cookie('hdstatus', 'no', { expires: 60, path: '/' });
+							}
+});
+
+playerInstance.on('error', function(e){
+	$("#trailer_addict_video_frame").html("<img src='//cdn.traileraddict.com/images/errors/notfound2.jpg' style='width:100%' border=0 />");
+}); 
+
+playerInstance.on('ready',function(){
+	var cont = playerInstance.getContainer();
+	var slider = cont.querySelectorAll('.jw-slider-container');
+	if(slider && slider[0]) slider[0].addEventListener("mousedown", function() { playerInstance.seekStart=true; playerInstance.previousState=playerInstance.getState(); }, true);
+});
+
+playerInstance.on('beforePlay',function(){
+	if(playerInstance.inCompletedState===true){
+		 playerInstance.pause(true);
+		 showOverlay();
+	}
+	if(playerInstance.seekStart===true){
+		if(playerInstance.previousState=="paused") playerInstance.pause(true);
+		setTimeout(function(){playerInstance.seekStart=false;},500);
+	}
+});
+
+
+/*playerInstance.on('seek', function(e){
+	os = playerInstance.getState();
+	console.log(os);
+});
+playerInstance.on('seeked', function(e){
+	if(os == 'paused') {
+		playerInstance.pause(true);
+	}	
+});*/
+
+playerInstance.on('time', function(e){
+	if(typeof pauseHere === 'undefined') {
+		pauseHere = playerInstance.getDuration() - .4;
+		console.log(pauseHere);
+	}
+	if(e.position >= pauseHere) {
+		playerInstance.inCompletedState=true;
+		playerInstance.pause(true);
+		showOverlay();
+		
+	}
+	
+});
+
+function showOverlay(){
+	$( "#testing" ).append( '<div id="overlay"><div id="overlaycell"><center><img src="http://cdn.traileraddict.com/img/jwplayer/header.png" style="width:40%; max-width:400px; position:relative; top:-6px;" /><br><img src="http://cdn.traileraddict.com/img/jwplayer/replay.png" id="vr_replay" /> <img src="http://cdn.traileraddict.com/img/jwplayer/related.png" id="vr_related" /> <a href="http://www.traileraddict.com" target="_blank"><img src="http://cdn.traileraddict.com/img/jwplayer/film.png" id="vr_film" border="0" /></a> <img src="http://cdn.traileraddict.com/img/jwplayer/share.png" id="vr_share" /></center></div></div>' );
+	$( "#overlay" ).show();
+}
+
+//menu buttons
+$(document).delegate('#vr_share', 'click', function(){
+  $( "#overlay" ).remove();
+  var sharingPlugin = playerInstance.getPlugin('sharing');
+  sharingPlugin.open();
+  frommenu = true;
+});
+$(document).delegate('#vr_related', 'click', function(){
+  $( "#overlay" ).remove();
+  var relatedPlugin = playerInstance.getPlugin('related');
+  relatedPlugin.open();
+  frommenu = true;
+});
+$(document).delegate('#vr_replay', 'click', function(){
+  $( "#overlay" ).remove();
+  playerInstance.inCompletedState=false;
+  playerInstance.seek(0);
+  
+  setTimeout(function(){ playerInstance.pause(false); }, 500);
+});
+</script>
+</body>
+</html>
